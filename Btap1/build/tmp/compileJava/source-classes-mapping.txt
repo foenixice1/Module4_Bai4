@@ -1,0 +1,8 @@
+model/User.java
+ model.User
+configuration/AppConfiguration.java
+ configuration.AppConfiguration
+configuration/AppInit.java
+ configuration.AppInit
+controller/Controller.java
+ controller.Controller
