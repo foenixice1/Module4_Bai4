@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        td {
+            font-size: 16px;
+            font-family: Tahoma;
+            text-align: center;
+            color: black;
+            background-color: white;
+        }
+
+        tr {
+            background-color: gray;
+            color: white;
+        }
+
+    </style>
+</head>
+<body style="
+    background: bisque;
+">
+<h1 style="text-align: center">UppFile</h1>
+<br>
+<p>
+    <a th:href="@{create}">
+        Add new Img
+    </a>
+</p>
+<table style="color: blue" ; border="1px" >
+    <thead>
+    <th colspan="4">
+        <h1 style="text-align: center">UppFile</h1>
+    </th>
+    </tr>
+    <tr>
+        <td width="300px" height="60px"><b>Name</b></td>
+        <td width="300px" height="60px"><b>IMG</b></td>
+        <td colspan="2" width="300px" height="60px"><b>Actison</b></td>
+
+
+    </tr>
+    </thead>
+    <div>
+        <tbody>
+        <tr th:each="up,loop : ${list}">
+            <td th:text="${up.name}"></td>
+            <td><img th:src="${up.img}" width="250" height="200"></td>
+            <td><a th:href="@{/edit(index=${loop.index})}">Edit</a></td>
+            <td><a th:href="@{/delete(index=${loop.index})}">delete</a></td>
+        </tr>
+        </tbody>
+    </div>
+</table>
+<a th:href="@{/upp}">
+    Back to customer list
+</a>
+</body>
+</html>

@@ -1,0 +1,10 @@
+config/ApplicationInitializer.java
+ config.ApplicationInitializer
+model/UppFile.java
+ model.UppFile
+config/ApplicationConfig.java
+ config.ApplicationConfig
+service/UppFileService.java
+ service.UppFileService
+controller/UppFileController.java
+ controller.UppFileController
